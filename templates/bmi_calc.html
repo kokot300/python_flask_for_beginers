@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pl">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bmi_calc.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+          integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <title>BMI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="//d26tpo4cm8sb6k.cloudfront.net/icon-32x32.png">
+</head>
+<body>
+<h1>BMI CALCULATOR</h1>
+
+<div class="form_div">
+    {% if bmi %}
+    <p class="p_result">your bmi is {{bmi}} kg/m<sup>2</sup> <br> your category is {{obesity}} </p>
+
+    {% else %}
+    <form class="pure-form-stacked" method="post" action="/">
+        <label>Your weight in kilograms<input type="text" name="weight" placeholder="ex. 100"></label>
+        <label>Your height in centimeters<input type="text" name="height" placeholder="ex. 200"></label>
+        <button type="submit" class="pure-button pure-button-primary button">Submit</button>
+    </form>
+    {% endif %}
+</div>
+</body>

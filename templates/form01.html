@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pl">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form01.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+          integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <title>form01</title>
+</head>
+<body>
+<div class="form_div">
+    {% if yourname %}
+    <p>welcome {{yourname}}</p>
+    {% else %}
+    <h1>FORM 01</h1>
+    <!--    <div class="pure-control-group" class="form_div">-->
+    <div>
+        <form class="pure-form-stacked" method="post" action="/form">
+            <label>Your name: <input type="text" name="your_name"></label>
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+</body>

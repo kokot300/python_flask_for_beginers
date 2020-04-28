@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+/*body{*/
+/*    padding: 20%;*/
+/*    margin: 50px;*/
+/*}*/
+
+.form_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
